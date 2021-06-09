@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
-
-
+const port = process.env.PORT || 3000
 
 const publicDirectoryPath = path.join(__dirname, '../public')
 console.log(__dirname)
@@ -11,12 +10,8 @@ const app = express()
 
 app.use(express.static(publicDirectoryPath))
 
-// app.get('', (req, res) => {
-//     res.send()
-// })
 
-
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Sever is up on port 3000");
 })
 
